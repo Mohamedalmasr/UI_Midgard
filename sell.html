@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sell • Midgard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="sell" data-mapbox-token="YOUR_TOKEN">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Midgard Home">
+        <img class="logo-img" src="New folder/logo-icon-transparent.png" alt="Midgard logo" />
+        <span class="logo-text">Midgard</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav-links" aria-label="Primary">
+        <a href="search.html">Buy</a>
+        <a href="sell.html">Sell</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="#valuation">Get valuation</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="page-hero">
+        <h1 class="page-title">Sell with confidence</h1>
+        <p class="page-subtitle">Market heatmap + agent expertise + clear guidance from listing to closing.</p>
+      </div>
+
+      <section class="surface" style="padding:1rem; border-radius: var(--radius); margin-bottom:1rem;">
+        <div class="section-head" style="margin-bottom:0.8rem;">
+          <h2>Market heatmap</h2>
+        </div>
+        <div id="sell-heatmap" class="heatmap-shell" aria-label="Market heatmap placeholder"></div>
+      </section>
+
+      <section class="section" style="padding-block:2.5rem;">
+        <div class="section-head">
+          <h2>Sales reps</h2>
+        </div>
+
+        <div class="reps-grid">
+          <article class="rep-card">
+            <div class="video-box" aria-hidden="true"></div>
+            <h3 style="margin:0;">Alex Morgan</h3>
+            <p style="color:#5f5f5f;">Luxury specialist</p>
+            <div class="stats">
+              <span class="stat">42 closings</span>
+              <span class="stat">$18M volume</span>
+              <span class="stat">4.9 rating</span>
+            </div>
+          </article>
+
+          <article class="rep-card">
+            <div class="video-box" aria-hidden="true"></div>
+            <h3 style="margin:0;">Jamie Lee</h3>
+            <p style="color:#5f5f5f;">Neighborhood expert</p>
+            <div class="stats">
+              <span class="stat">31 closings</span>
+              <span class="stat">$12M volume</span>
+              <span class="stat">4.8 rating</span>
+            </div>
+          </article>
+
+          <article class="rep-card">
+            <div class="video-box" aria-hidden="true"></div>
+            <h3 style="margin:0;">Sam Patel</h3>
+            <p style="color:#5f5f5f;">Fast-sale strategy</p>
+            <div class="stats">
+              <span class="stat">55 closings</span>
+              <span class="stat">$21M volume</span>
+              <span class="stat">4.9 rating</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="valuation" class="section" aria-labelledby="valuation-title">
+        <div class="section-head">
+          <h2 id="valuation-title">How much is my house worth?</h2>
+        </div>
+
+        <div class="valuation-card">
+          <form id="valuation-form" class="valuation-form">
+            <div class="field">
+              <label for="val-address">Property address</label>
+              <input id="val-address" type="text" placeholder="Street, City" required />
+            </div>
+
+            <div class="field">
+              <label for="val-beds">Beds</label>
+              <select id="val-beds">
+                <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5+</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="val-baths">Baths</label>
+              <select id="val-baths">
+                <option>1</option><option selected>2</option><option>3</option><option>4+</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="val-sqft">Approx. sqft</label>
+              <input id="val-sqft" type="number" min="200" step="10" value="2000" />
+            </div>
+
+            <button class="btn btn-primary" type="submit">Get instant estimate</button>
+          </form>
+
+          <div class="valuation-result" aria-live="polite">
+            <p class="vr-title">Estimated range</p>
+            <p class="vr-value" id="val-output">—</p>
+            <p class="vr-status" id="val-status">Enter details to see an instant estimate.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials" style="margin-top:1rem;">
+        <div class="container" style="width:100%; margin:0;">
+          <div class="section-head">
+            <h2>Testimonials</h2>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <p class="quote">“Clear valuation and great guidance — sold in 9 days.”</p>
+              <p class="client">David R. · Miami, FL</p>
+            </article>
+            <article class="testimonial-card">
+              <p class="quote">“The market insight helped us price perfectly.”</p>
+              <p class="client">Lina H. · Austin, TX</p>
+            </article>
+            <article class="testimonial-card">
+              <p class="quote">“Amazing agent support from start to close.”</p>
+              <p class="client">Mark T. · Denver, CO</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo footer-logo">
+          <img class="logo-img" src="New folder/logo-icon-transparent.png" alt="Midgard logo" />
+          <span class="logo-text">Midgard</span>
+        </a>
+        <p class="footer-copy">Smarter moves for buyers and sellers.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="search.html">Buy</a>
+        <a href="sell.html">Sell</a>
+        <a href="blogs.html">Blogs</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <p>+1 (800) 555-0199</p>
+        <p>hello@midgardhomes.com</p>
+        <p>225 Market Street, San Francisco, CA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+

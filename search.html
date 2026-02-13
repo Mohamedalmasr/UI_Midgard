@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Results • Midgard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="search" data-mapbox-token="YOUR_TOKEN">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Midgard Home">
+        <img class="logo-img" src="New folder/logo-icon-transparent.png" alt="Midgard logo" />
+        <span class="logo-text">Midgard</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav-links" aria-label="Primary">
+        <a href="search.html">Buy</a>
+        <a href="sell.html">Sell</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="sell.html">List your home</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="page-hero">
+        <h1 class="page-title">Search results</h1>
+        <p class="page-subtitle">
+          Showing homes for <strong id="search-query">your area</strong>.
+          Use filters to refine results. (Map is a placeholder – Mapbox later.)
+        </p>
+      </div>
+
+      <div class="results-layout">
+        <!-- Filters -->
+        <aside class="filters-panel surface" aria-label="Smart filter panel">
+          <h3>Filters</h3>
+
+          <div class="filter-row">
+            <label for="f-type">Property type</label>
+            <select id="f-type">
+              <option value="Any">Any</option>
+              <option value="House">House</option>
+              <option value="Townhome">Townhome</option>
+              <option value="Condo">Condo</option>
+            </select>
+          </div>
+
+          <div class="filter-row">
+            <label for="f-beds">Beds</label>
+            <select id="f-beds">
+              <option value="0">Any</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+            </select>
+          </div>
+
+          <div class="filter-row">
+            <label for="f-maxprice">Max price</label>
+            <select id="f-maxprice">
+              <option value="0">Any</option>
+              <option value="600000">$600k</option>
+              <option value="800000">$800k</option>
+              <option value="1000000">$1M</option>
+              <option value="1200000">$1.2M</option>
+            </select>
+          </div>
+        </aside>
+
+        <!-- Results + Map -->
+        <section class="results-main" aria-label="Results and map">
+          <div class="results-topbar surface">
+            <div class="results-count" id="results-count">0 homes found</div>
+            <select id="sort" class="sort-select" aria-label="Sort results">
+              <option value="relevance">Sort: Relevance</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+            </select>
+          </div>
+
+          <div class="cards-col" id="results-list" aria-label="Results list"></div>
+
+          <aside class="map-col surface" aria-label="Interactive map component">
+            <div id="map-shell" class="map-shell">
+              <div class="map-hint">Interactive Map (placeholder)</div>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo footer-logo">
+          <img class="logo-img" src="New folder/logo-icon-transparent.png" alt="Midgard logo" />
+          <span class="logo-text">Midgard</span>
+        </a>
+        <p class="footer-copy">Smarter moves for buyers and sellers.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="search.html">Buy</a>
+        <a href="sell.html">Sell</a>
+        <a href="blogs.html">Blogs</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <p>+1 (800) 555-0199</p>
+        <p>hello@midgardhomes.com</p>
+        <p>225 Market Street, San Francisco, CA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+

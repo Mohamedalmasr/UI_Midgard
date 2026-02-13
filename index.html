@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midgard Realty</title>
+  <meta
+    name="description"
+    content="Find your next home with Midgard. Browse just-listed homes, read buyer and seller guides, and get a free home valuation."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ✅ fix name -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="home">
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Midgard Home">
+        <img class="logo-img" src="New folder/logo-icon-transparent.png" alt="Midgard logo" />
+        <span class="logo-text">Midgard</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav-links" aria-label="Primary">
+        <a href="search.html">Buy</a>
+        <a href="sell.html">Sell</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="sell.html">List your home</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO + OMNI SEARCH (BUY ONLY) -->
+    <section id="buy" class="hero" aria-label="Buy homes">
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <p class="pill">Buy</p>
+        <h1>Find your next home with Midgard</h1>
+        <p class="hero-sub">Search by city, neighborhood, or address.</p>
+
+        <form class="search-card" id="buy-search-form" autocomplete="off">
+          <div class="search-top">
+            <span class="mode-pill">Buy</span>
+            <span class="mode-note">Rent coming soon</span>
+          </div>
+
+          <div class="search-row">
+            <div class="field location-field">
+              <label for="location-input">Location</label>
+              <input
+                id="location-input"
+                name="location"
+                type="text"
+                placeholder="City, neighborhood, or address"
+                aria-autocomplete="list"
+                aria-controls="location-suggestions"
+              />
+              <ul id="location-suggestions" class="suggestions" role="listbox"></ul>
+            </div>
+
+            <button class="btn btn-primary search-btn" type="submit">Search</button>
+          </div>
+
+          <p class="helper">
+            Filters (price, beds, type…) will appear on the results page.
+          </p>
+
+          <p id="search-feedback" class="search-feedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- JUST LISTED -->
+    <section class="section just-listed" aria-label="Just listed homes">
+      <div class="container">
+        <div class="section-head">
+          <h2>Just listed</h2>
+          <a href="search.html" class="link-arrow">View all</a>
+        </div>
+
+        <div id="listings-grid" class="listings-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-head">
+          <h2>What our clients say</h2>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p class="quote">
+              “The search felt fast and actually relevant. We shortlisted homes in one day.”
+            </p>
+            <p class="client">Sara M. · Austin, TX</p>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="quote">
+              “We sold above asking. The valuation + agent support made it smooth.”
+            </p>
+            <p class="client">David R. · Miami, FL</p>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="quote">
+              “The buyer guides made our first purchase way less stressful.”
+            </p>
+            <p class="client">Nora K. · Denver, CO</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELL CTA -->
+    <section id="sell" class="section" aria-label="Sell your home">
+      <div class="container">
+        <article class="sell-cta">
+          <div class="sell-content">
+            <p class="pill">Sell</p>
+            <h2>Selling your home? Get a free valuation in minutes.</h2>
+            <p>
+              Understand your market value with local insights and support from experienced agents.
+            </p>
+
+            <div class="sell-actions">
+              <a href="#" class="btn btn-primary">Get valuation</a>
+              <a href="#" class="btn btn-outline">Talk to an agent</a>
+            </div>
+          </div>
+
+          <div class="sell-visual" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo footer-logo" aria-label="Midgard Home">
+          <img class="logo-img" src="New folder/logo-icon-transparent.png" alt="Midgard logo" />
+          <span class="logo-text">Midgard</span>
+        </a>
+        <p class="footer-copy">Smarter moves for buyers and sellers.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="search.html">Buy</a>
+        <a href="sell.html">Sell</a>
+        <a href="blogs.html">Blogs</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <p>+1 (800) 555-0199</p>
+        <p>hello@midgardhomes.com</p>
+        <p>225 Market Street, San Francisco, CA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

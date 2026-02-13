@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Detail • Midgard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="property">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Midgard Home">
+        <img class="logo-img" src="New folder/logo-icon-transparent.png" alt="Midgard logo" />
+        <span class="logo-text">Midgard</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav-links" aria-label="Primary">
+        <a href="search.html">Buy</a>
+        <a href="sell.html">Sell</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="sell.html">List your home</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="page-hero">
+        <h1 class="page-title">1482 Cedar Ave</h1>
+        <p class="page-subtitle">Austin, TX • $785,000 • 4 beds • 3 baths</p>
+      </div>
+
+      <!-- Cinematic Gallery -->
+      <section class="gallery" aria-label="Cinematic media gallery">
+        <div class="gallery-main">
+          <img id="gallery-main-img"
+            src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1400&q=80"
+            alt="Property main photo" />
+        </div>
+
+        <div class="gallery-thumbs" aria-label="Gallery thumbnails">
+          <div class="thumb" data-thumb data-src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=700&q=80" alt="Thumbnail 1"/>
+          </div>
+          <div class="thumb" data-thumb data-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Thumbnail 2"/>
+          </div>
+          <div class="thumb" data-thumb data-src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="Thumbnail 3"/>
+          </div>
+          <div class="thumb" data-thumb data-src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=700&q=80" alt="Thumbnail 4"/>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bento Grid Layout -->
+      <section class="bento" aria-label="Bento grid layout">
+        <article class="bento-card">
+          <h3>Key facts</h3>
+          <div class="kv">
+            <div><strong>Price</strong><span>$785,000</span></div>
+            <div><strong>Status</strong><span>Just listed</span></div>
+            <div><strong>Beds</strong><span>4</span></div>
+            <div><strong>Baths</strong><span>3</span></div>
+            <div><strong>Type</strong><span>House</span></div>
+            <div><strong>Sqft</strong><span>2,310</span></div>
+          </div>
+        </article>
+
+        <article class="bento-card">
+          <h3>Features</h3>
+          <ul>
+            <li>Open kitchen + island</li>
+            <li>Large backyard</li>
+            <li>Garage parking</li>
+            <li>Natural light</li>
+            <li>Updated flooring</li>
+          </ul>
+        </article>
+
+        <article class="bento-card">
+          <h3>Contact an agent</h3>
+          <form class="agent-form">
+            <div class="row">
+              <input type="text" placeholder="Your name" />
+              <input type="email" placeholder="Email" />
+              <textarea placeholder="Message (e.g., schedule a viewing)"></textarea>
+              <button class="btn btn-primary" type="submit">Send request</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="bento-card" style="grid-column: 1 / -1;">
+          <h3>Location</h3>
+          <div class="mini-map" aria-label="Map placeholder"></div>
+        </article>
+      </section>
+
+      <section class="section mortgage" aria-labelledby="mortgage-title">
+        <div class="section-head">
+          <h2 id="mortgage-title">Mortgage calculator</h2>
+        </div>
+
+        <div class="mortgage-card">
+          <div class="mortgage-grid">
+            <div class="field">
+              <label for="mc-price">Home price</label>
+              <input id="mc-price" type="number" min="0" step="1000" value="785000" />
+            </div>
+
+            <div class="field">
+              <label for="mc-down">Down payment</label>
+              <input id="mc-down" type="number" min="0" step="1000" value="78500" />
+            </div>
+
+            <div class="field">
+              <label for="mc-rate">Interest rate (<span id="mc-rate-val">6.50</span>%)</label>
+              <input id="mc-rate" type="range" min="1" max="15" step="0.05" value="6.5" />
+            </div>
+
+            <div class="field">
+              <label for="mc-years">Term</label>
+              <select id="mc-years">
+                <option value="15">15 years</option>
+                <option value="20">20 years</option>
+                <option value="25">25 years</option>
+                <option value="30" selected>30 years</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mortgage-result" aria-live="polite">
+            <p class="mr-label">Monthly Payment</p>
+            <p class="mr-value" id="mc-payment">$0</p>
+            <p class="mr-hint">Estimation only — taxes/insurance not included.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo footer-logo">
+          <img class="logo-img" src="New folder/logo-icon-transparent.png" alt="Midgard logo" />
+          <span class="logo-text">Midgard</span>
+        </a>
+        <p class="footer-copy">Smarter moves for buyers and sellers.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="search.html">Buy</a>
+        <a href="sell.html">Sell</a>
+        <a href="blogs.html">Blogs</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <p>+1 (800) 555-0199</p>
+        <p>hello@midgardhomes.com</p>
+        <p>225 Market Street, San Francisco, CA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
